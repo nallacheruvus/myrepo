@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("em").addClass("sel");
+        $("#myid").addClass("highli");
+      });
+    </script>
+    <script>
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("mydiv").innerHTML = xhttp.responseText;
+        }
+      };
+      xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos", true);
+      xhttp.send();
+    </script>
+    <style>
+      .sel {
+        color: red;
+      }
+      .highli {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <em title="Bold and courageous">First</em>
+    <p id="myid">Second Para</p>
+    <br /><br />
+    <div id="mydiv"></div>
+  </body>
+</html>

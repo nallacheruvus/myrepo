@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Detecting your location coordinates using a browser</p>
+    <br />
+    <button onclick="fetCoords()" style="background-color: black; color: aqua">
+      Get My Coordinates
+    </button>
+    <br />
+    <div id="tester" style="background-color: chartreuse; color: crimson"></div>
+    <script>
+      const x = document.getElementById("tester");
+      function fetCoords() {
+        try {
+          navigator.geolocation.getCurrentPosition(callBack);
+        } catch (err) {
+          x.innerHTML = err;
+        }
+      }
+      function callBack(pos) {
+        x.innerHTML = `Latitude of your place:${pos.coords.latitude}<br/>Longitude is:${pos.coords.longitude}`;
+        window.open("https://www.openstreetmap.org/#map=18/17.36952/78.54748");
+      }
+    </script>
+  </body>
+</html>

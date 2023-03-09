@@ -1,0 +1,26 @@
+let a = 100;
+console.log(a);
+console.log(typeof (a));
+console.log('***************');
+let b = "Hai there";
+console.log(b);
+console.log(typeof (b));
+console.log('***************');
+let c = true;
+console.log(c);
+console.log(typeof c);
+console.log('***************');
+let d = null;
+console.log(d);
+console.log(typeof d);
+console.log('***************');
+let e;
+console.log(e);
+console.log('***************');
+console.log(typeof e);
+let f = { name: 'satish', email: 'sat@yahoo.com' };
+console.log(f);
+console.log(typeof f);
+console.log('***************');
+let r = Symbol('a')
+console.log(typeof (r));
