@@ -1,0 +1,8 @@
+Go to configuration page of your job/project
+Select "Execute Windows batch command" from "Add build step" combo
+Type the following on Command field: javac Hello.java java Hello
+Save configuration
+Keep Hello.java on the folder /Jenkins/workspace/
+Build the project/job by clicking "Build Now" link and see the Console Output
+Satish Output
+New Output
